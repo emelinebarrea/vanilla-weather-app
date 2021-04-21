@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -39,8 +40,11 @@
               </div>
             </div>
           </form>
-          <h1>Dublin</h1>
-          <h2>Tuesday 17:00 • Mostly Cloudy</h2>
+          <h1 id="displayed-city">Dublin</h1>
+          <h2>
+            <span id="current-time">Tuesday 17:00</span> •
+            <span id="displayed-description">Mostly Cloudy</span>
+          </h2>
           <div class="row">
             <div class="col-6">
               <img
@@ -48,13 +52,13 @@
                 src="https://duckduckgo.com/assets/weather/icons/partly-cloudy-day.svg"
                 alt="clear"
               />
-              <span class="displayed-temp">12</span
+              <span id="displayed-temp"></span
               ><span class="units"> °C | °F</span>
             </div>
             <div class="col-6">
               <ul>
-                <li>💦 Humidity: 67%</li>
-                <li>💨 Wind: 10 KPH NE</li>
+                <li>💦 Humidity: <span id="displayed-humidity"></span> %</li>
+                <li>💨 Wind: <span id="displayed-wind"></span> Km/H</li>
               </ul>
             </div>
           </div>

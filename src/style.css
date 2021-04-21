@@ -63,11 +63,15 @@ li {
   background: #fff;
 }
 
+#displayed-description {
+  text-transform: capitalize;
+}
+
 .displayed-temp-icon {
   width: 30%;
 }
 
-.displayed-temp {
+#displayed-temp {
   font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-weight: 500;
