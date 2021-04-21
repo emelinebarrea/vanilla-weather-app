@@ -29,15 +29,22 @@ function displayTemperature(response) {
   let displayedHumidity = document.querySelector("#displayed-humidity");
   let displayedWind = document.querySelector("#displayed-wind");
   let currentTime = document.querySelector("#current-time");
+  let displayedIcon = document.querySelector("#displayed-icon");
   displayedTemperature.innerHTML = Math.round(response.data.main.temp);
   displayedCity.innerHTML = response.data.name;
   displayedDescription.innerHTML = response.data.weather[0].description;
   displayedHumidity.innerHTML = response.data.main.humidity;
   displayedWind.innerHTML = Math.round(response.data.wind.speed);
   currentTime.innerHTML = formatDate(response.data.dt * 1000);
+  displayedIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  displayedIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "df3cb55bcc566bfc15bd0510f52871eb";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Dublin&appid=${apiKey}&units=metric`;
+let city = "Dublin";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);

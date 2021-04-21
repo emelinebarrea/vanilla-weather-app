@@ -10,13 +10,13 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  margin: 5px 0 10px;
+  margin: 5px 0 5px;
   color: #272044;
 }
 
 ul {
   margin: 0;
-  padding: 10px 0;
+  padding: 22px 0;
 }
 
 li {
@@ -68,7 +68,6 @@ li {
 }
 
 .displayed-temp-icon {
-  width: 30%;
 }
 
 #displayed-temp {
