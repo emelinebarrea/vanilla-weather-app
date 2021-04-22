@@ -90,12 +90,14 @@ li {
   font-weight: 300px;
 }
 
-.open-source-link {
+.open-source-link,
+.name-link {
   text-decoration: none;
   color: #00bcf2;
 }
 
-.open-source-link:hover {
+.open-source-link:hover,
+.name-link:hover {
   text-decoration: none;
   color: pink;
 }
@@ -109,4 +111,14 @@ li {
   color: #272044;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+}
+
+.weather-temperature .active {
+  color: #272044;
+  text-decoration: none;
+  cursor: default;
+}
+
+a {
+  color: #00bcf2;
 }

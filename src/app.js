@@ -22,7 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let displayedTemperature = document.querySelector("#displayed-temp");
   let displayedCity = document.querySelector("#displayed-city");
   let displayedDescription = document.querySelector("#displayed-description");
@@ -30,7 +29,10 @@ function displayTemperature(response) {
   let displayedWind = document.querySelector("#displayed-wind");
   let currentTime = document.querySelector("#current-time");
   let displayedIcon = document.querySelector("#displayed-icon");
-  displayedTemperature.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+
+  displayedTemperature.innerHTML = Math.round(celsiusTemperature);
   displayedCity.innerHTML = response.data.name;
   displayedDescription.innerHTML = response.data.weather[0].description;
   displayedHumidity.innerHTML = response.data.main.humidity;
@@ -55,7 +57,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Dublin");
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let displayedTemperature = document.querySelector("#displayed-temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  displayedTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let displayedTemperature = document.querySelector("#displayed-temp");
+  displayedTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Dublin");
