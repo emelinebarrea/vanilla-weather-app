@@ -30,6 +30,10 @@ li {
   line-height: 1.2;
 }
 
+a {
+  color: #00bcf2;
+}
+
 .weather-app {
   border: solid 1px #272044;
   box-shadow: 8px 8px 0px 0px #272044;
@@ -119,6 +123,32 @@ li {
   cursor: default;
 }
 
-a {
-  color: #00bcf2;
+.weather-temperature {
+  margin-bottom: 10px;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+  text-align: center;
+  color: #272044;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.weather-forecast-date {
+  color: #272044;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.weather-forecast-temp-max {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.weather-forecast-temp-min {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
