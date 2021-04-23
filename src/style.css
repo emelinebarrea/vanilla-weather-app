@@ -1,9 +1,17 @@
+body {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 h1 {
   font-family: "Poppins", sans-serif;
   font-size: 35px;
   font-weight: 700;
   margin: 0;
-  color: #272044;
+  color: #222362;
 }
 
 h2 {
@@ -11,34 +19,46 @@ h2 {
   font-size: 16px;
   font-weight: 400;
   margin: 5px 0 5px;
-  color: #272044;
+  color: #222362;
 }
 
 ul {
   margin: 0;
-  padding: 22px 0;
+  padding: 24px 0;
 }
 
 li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: #6c757d;
+  color: #222362;
+
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.2;
 }
 
+hr {
+  color: #222362;
+}
+
 a {
-  color: #00bcf2;
+  color: #222362;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ec6e4c;
 }
 
 .weather-app {
-  border: solid 1px #272044;
-  box-shadow: 8px 8px 0px 0px #272044;
+  border: solid 1px rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+
   padding: 20px;
   margin: 0 0 10px;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .weather-app-wrapper {
@@ -47,7 +67,7 @@ a {
 }
 
 .search-input {
-  border: solid 1px #272044;
+  border: solid 1px #222362;
   padding: 5px 15px;
   width: 370px;
 }
@@ -55,16 +75,20 @@ a {
 .search-button {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-weight: 300;
+  color: #fff;
   width: 100px;
   padding: 5px 0;
   background: #ffffff;
-  border: solid 1px #272044;
-  box-shadow: 6px 6px 0px 0px #272044;
-  background: #91ccec;
+  border: none;
+  border: solid 1px #222362;
+  background: #ec6e4c;
 }
 
 .search-button:hover {
-  background: #fff;
+  background: #222362;
+  border: solid 1px #222362;
+  color: #fff;
 }
 
 #displayed-description {
@@ -96,14 +120,14 @@ a {
 
 .open-source-link,
 .name-link {
-  text-decoration: none;
-  color: #00bcf2;
+  text-decoration: underline;
+  color: #222362;
 }
 
 .open-source-link:hover,
 .name-link:hover {
   text-decoration: none;
-  color: pink;
+  color: #ec6e4c;
 }
 
 #search-form {
@@ -112,7 +136,7 @@ a {
 }
 
 ::placeholder {
-  color: #272044;
+  color: #222362;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
@@ -130,13 +154,13 @@ a {
 .weather-forecast {
   margin-top: 10px;
   text-align: center;
-  color: #272044;
+  color: #222362;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
 .weather-forecast-date {
-  color: #272044;
+  color: #222362;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 600;
